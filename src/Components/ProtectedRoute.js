@@ -11,7 +11,7 @@ const ProtectedRoute = ({ Component }) => {
     if(localStorage.getItem('isLogin') && window.location.pathname === '/') {
       nav('/dashboard');
     }
-  })
+  },[])
   return (
     <div>
       <Component />
