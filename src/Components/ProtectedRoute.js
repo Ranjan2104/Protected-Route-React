@@ -8,6 +8,9 @@ const ProtectedRoute = ({ Component }) => {
     if(!isLogin) {
       nav('/error')
     }
+    if(localStorage.getItem('isLogin') && window.location.pathname === '/') {
+      nav('/dashboard');
+    }
   })
   return (
     <div>
